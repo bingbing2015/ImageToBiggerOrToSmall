@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIScrollViewDelegate>{
+    CGFloat offset;
+}
+
+@property (nonatomic, retain) UIScrollView *imageScrollView;
+
+- (CGRect)zoomRectForScale:(float)scale inView:(UIScrollView*)scrollView withCenter:(CGPoint)center;
 
 @end
